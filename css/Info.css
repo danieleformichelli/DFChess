@@ -1,0 +1,39 @@
+body{
+	background-color: #DCDCDC;
+}
+
+h1, h2, h3, h4{
+	font-variant: small-caps;
+}
+
+.infoButtons{
+	position: relative;
+	width: 20pt;
+	height: 20pt;
+	margin: 0px 2pt;
+	top: 4pt;
+}
+
+.infoMoves{
+	position: relative;
+	float: right;
+	width: 70pt;
+	height: 70pt;
+	margin-right: 5pt;
+}
+
+#timer{
+	width: 110pt;
+	height: 45pt;
+}
+
+#eaten{
+	width: 150pt;
+	height: 40pt;
+}
+
+p{
+	margin-left: 2%;
+	font-size: 12pt;
+	line-height: 20pt;
+}

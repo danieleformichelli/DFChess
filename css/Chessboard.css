@@ -1,0 +1,59 @@
+#chessboard{
+	position: absolute;
+	border: 2px solid;
+	margin: 0px;
+	left: 0px;
+}
+
+.cell{
+	position: relative;
+	float: left;
+	z-index: 1;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+.left{
+	clear: left;
+}
+
+.black{
+	background-color: #D18B47;
+}
+
+.white{
+	background-color: #FFCE9E;
+}
+
+.selected{
+	background-color: #4BAD02 !important;
+	z-index: 3;
+	border: 2px solid red;
+	margin: -2px;
+}
+
+.selectable:hover{
+	background-color: #E8AC6A;
+}
+
+.hint{
+	background-color: maroon;
+	z-index: 2;
+}
+
+.hint:hover{
+	background-color: #AA0000;
+}
+
+.piece{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.onTop{
+	z-index: 4;
+}

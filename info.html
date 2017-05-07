@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+ <head>
+	<title> Manuale </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="SHORTCUT ICON" href="./img/icon.ico">
+	<link rel="stylesheet" type="text/css" href="./css/Info.css">
+ </head>
+ <body>
+	<h1> Il Gioco degli Scacchi </h1>
+		<p>
+			L'obiettivo del gioco degli scacchi è dare scacco matto all'avversario ovvero porre il re avversario sotto attacco in una condizione in cui il giocatore avversario non ha nessuna mossa legale da effettuare. Una mossa è legale se è consentita per il pezzo e se dopo di essa il proprio re non è sotto attacco da parte di un pezzo avversario.<br>
+			Il gioco è iniziato dal giocatore bianco ed ogni giocatore effettua una mossa per ogni turno.<br>
+			Ogni giocatore hadisposizione un'ora di tempo per effettuare le proprie mosse, se uno dei due giocatori esaurisce il tempo a propria disposizione la vittoria viene assegnata all'avversario.<br>
+			Una partita può finire in pareggio se si verifica una delle seguenti condizioni:
+		</p>
+		<ul>
+			<li> sulla scacchiera sono rimasti soltanto i due re oppure i due re ed un cavallo o un alfiere, in queste condizioni non esiste alcuna sequenza di mosse che porti ad uno scacco matto </li>
+			<li> i due giocatori concordano per il pareggio </li>
+			<li> <a name="draw">sono state effettuate almeno 100 mosse senza mangiare alcun pezzò né muovere alcun pedone e il giocatore di turno decide per il pareggio</a> </li>
+		</ul>
+		<h2> Mosse Consentite </h2>
+		<ul>
+		<li><h3> Re <img class="infoMoves" src="./img/info/king.jpg" alt="king" onclick="open('./img/info/king.jpg','','')"> </h3>
+			<p>
+				Il re può muoversi in una qualunque delle caselle adiacenti a quella in cui si trova purché questa sia vuota o contenga un pezzo avversario. Può effettuare anche una mossa speciale chiamata <a href="#arrocco">arrocco</a>
+			</p><br></li>
+		<li><h3> Regina <img class="infoMoves" src="./img/info/queen.jpg" alt="queen" onclick="open('./img/info/queen.jpg','','')"></h3>
+			<p>
+				La regina può muoversi in diagonale, verticale ed orizzontale purché le caselle attraversate siano vuote ad eccezione dell'ultima che può contenere un pezzo avversario.
+			</p><br></li>
+		<li><h3> Torre <img class="infoMoves" src="./img/info/rook.jpg" alt="rook" onclick="open('./img/info/rook.jpg','','')"></h3>
+			<p>
+				La torre può muoversi in verticale ed orizzontale purché le caselle attraversate siano vuote ad eccezione dell'ultima che può contenere un pezzo avversario.
+			</p><br></li>
+		<li><h3> Alfiere <img class="infoMoves" src="./img/info/bishop.jpg" alt="bishop" onclick="open('./img/info/bishop.jpg','','')"></h3>
+			<p>
+				L'alfiere può muoversi in diagonale purché le caselle attraversate siano vuote ad eccezione dell'ultima che può contenere un pezzo avversario.
+			</p><br></li>
+		<li><h3> Cavallo <img class="infoMoves" src="./img/info/knight.jpg" alt="knight" onclick="open('./img/info/knight.jpg','','')"></h3>
+			<p>
+				Il cavallo può muoversi solo "a L", ovvero in ogni sua mossa si può muovere di due caselle in verticale ed una in orizzontale o viceversa.
+			</p><br></li>
+		<li><h3> Pedone <img class="infoMoves" src="./img/info/pawn.jpg" alt="pawn" onclick="open('./img/info/pawn.jpg','','')"></h3>
+			<p>
+				Il pedone può muoversi in avanti di una casella (quando si trova nella casella di partenza può muoversi anche di 2 caselle) purché il suo percorso sia libero (inclusa la casella di destinazione). Può mangiare un pezzo avversario spostandosi al suo posto se questo si trova in una delle due caselle diagonali adiacenti al pedone stesso. Può mangiare anche effettuando una <a href="#ep">presa en passant</a>.
+			</p><br></li>
+		<li><h3> Mosse Speciali </h3>
+		<h4> <a name="arrocco">Arrocco</a> <img class="infoMoves" src="./img/info/castling.gif" alt="castling" onclick="open('./img/info/castling.gif','','')"></h4>
+			<p>
+				L'arrocco è una mossa speciale che coinvolge il re ed una delle due torri e può essere effettuata solo in condizioni particolari. Consiste nello spostare il re di due caselle verso la torre e di spostare quest'ultima nella casella attraversata dal re. Le condizioni sotto le quali si può effettuare l'arrocco sono:
+			</p>
+				<ul>
+					<li> il re non deve essere sotto scacco </li>
+					<li> nessuna delle caselle tra il re e la torre deve essere occupata </li>
+					<li> nessuna delle caselle attraversate dal re deve esesere sotto attacco da parte di un pezzo avversario </li>
+					<li> né il re né la torre interessata devono essere mai stati mossi </li>
+				</ul>
+		<h4> <a name="ep">Presa en passant</a> <img class="infoMoves" src="./img/info/pawn.gif" alt="pawn" onclick="open('./img/info/pawn.gif','','')"></h4>
+			<p>
+				La presa en passant è una mossa speciale che coinvolge due pedoni. Se un pedone avversario si è appena mosso in avanti di due caselle andando ad affiancare un proprio pedone questo lo può mangiare spostandosi in diagonale ed andando ad occupare la casella attraversata dall'avversario.
+			</p>
+		<h4> Promozione </h4>
+			<p>
+				Quando un pedone raggiunge l'ultima traversa della scacchiera può essere promosso (a scelta del giocatore) in una regina, in una torre, in un alfiere o in un cavallo
+			</p>
+		</ul>
+		<h2> <a name="notazione">Notazione Algebrica</a></h2>
+			<p>
+				La notazione algebrica è utilizzata per tenere traccia delle mosse effettuate durante una partita di scacchi. Ne esistono molte varianti, qui prenderemo in considerazione la notazione algebrica estesa.<br>
+				Ogni mossa inizia con la lettera associata al pezzo mosso (la lettera cambia in base alla lingua) oppure con un simbolo rappresentante il pezzo stesso; dopo il pezzo sono riportate le coordinate di partenza della mossa separate dalle coordinate di partenza da un '-' o da un 'x'. La x indica che durante la mossa è stato mangiato un pezzo.<br>
+				A seguito delle coordinate di arrivo si può trovare:
+			</p>
+				<ul>
+					<li> +, indica che la mossa ha messo sotto scacco l'avversario </li>
+					<li> #, indica che con la mossa si è dato scacco matto all'avversario </li>
+					<li> 0-0, indica un arrocco corto </li>
+					<li> 0-0-0, indica un arrocco lungo </li>
+					<li> ep indica una presa en passant </li>
+					<li> altri simboli che rappresentano commenti di chi scrive le mosse </li>
+				</ul>
+	<h1> Guida all'uso </h1>
+		<ol>
+		<li><h2> Cronometri <img class="infoMoves" id="timer" src="./img/info/timer.jpg" alt="timer" onclick="open('./img/info/timer.jpg','','')"></h2>
+			<p>
+				Ogni giocatore ha a disposizione un'ora di tempo per effettuare le proprie mosse, quando il cronometro raggiungerà lo zero il giocatore di turno perde la partita
+			</p></li>
+		<li><h2> Mosse Effettuate </h2>
+			<p>
+				Contiene la lista delle mosse effettuate dai due giocatori, scritta secondo la <a href="#notazione">notazione algebrica</a>
+			</p></li>
+		<li><h2> Pezzi Mangiati <img class="infoMoves" id="eaten" src="./img/info/eaten.jpg" alt="eaten" onclick="open('./img/info/eaten.jpg','','')"></h2>
+			<p>
+				I due riquadri nella sezione destra conterranno i pezzi mangiati dal giocatore bianco (in basso) e dal giocatore nero (in alto)
+			</p></li>
+		<li><h2> Impostazioni </h2>
+			<ul>
+			<li><h3> Tipo di movimento </h3>
+				<p>
+					Seleziona <em>Drag&amp;Drop</em> per spostare i pezzi trascinandoli, con l'opzione <em>Click</em> clicca sul pezzo da spostare e successivamente sulla casella di destinazione
+				</p></li>
+			<li><h3> Mostra mosse suggerite</h3>
+				<p>
+					Se selezionato, dopo aver selezionato un pezzo vengono evidenziate le caselle in cui esso si può muovere
+				</p></li>
+			<li><h3> Mostra animazioni </h3>
+				<p>
+					Se selezionato lo spostamento dei pezzi sarà animato, sconsigliato se si utilizza Internet Explorer 8 o precedenti
+				</p></li>
+			<li><h3> Salvataggio automatico </h3>
+				<p>
+					Alla chiusura del browser la partita verrà salvata automaticamente nei cookie
+				</p></li>
+		<li><h3> Bottoni </h3>
+			<ul>
+			<li><h4> Nuova Partita <img class="infoButtons" alt="new" src="./img/new.png"> </h4>
+				<p>
+					Annulla la partita corrente e ne avvia una nuova
+				</p></li>
+			<li><h4> Salva Partita <img class="infoButtons" alt="save" src="./img/save.png"> </h4>
+				<p>
+					Salva la partita corrente nei cookie
+				</p></li>
+			<li><h4> Carica Partita <img class="infoButtons" alt="load" src="./img/load.png"> </h4>
+				<p>
+					Carica una partita salvata nei cookie
+				</p></li>
+			<li><h4> Info <img class="infoButtons" alt="info" src="./img/info.png"> </h4>
+				<p>
+					Mostra il manuale del gioco
+				</p></li>
+			<li><h4> Chiedi Pareggio </h4>
+				<p>
+					Offre il pareggio all'avversario, in particolari <a href="#draw">condizioni</a> fa pareggiare la partita senza il consenso dell'avversario
+				</p></li>
+			</ul></li>
+			</ul></li>
+		</ol>
+ </body>
+</html>

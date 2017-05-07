@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+ <head>
+    <title> Chess </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="SHORTCUT ICON" href="./img/icon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/Chessboard.css">
+    <link rel="stylesheet" type="text/css" href="./css/Chess.css">
+    <script type="text/javascript" src="./js/Main.js"></script>
+    <script type="text/javascript" src="./js/Utility.js"></script>
+    <script type="text/javascript" src="./js/Layout.js"></script>
+    <script type="text/javascript" src="./js/Chess.js"></script>
+    <script type="text/javascript" src="./js/Piece.js"></script>
+    <script type="text/javascript" src="./js/Timer.js"></script>
+ </head>
+ <body>
+    <!-- div sinistro contenente i cronometri e le mosse effettuate -->
+    <div class="container" id="left">
+       <div class="timer" id="dbtimer"><span id="btimer">00:00:00</span></div>
+       <div id="movesDiv">
+          <div class="moves" id="wMovesDiv"><p id="wmoves">White:</p></div>
+          <div class="moves" id="bMovesDiv"><p id="bmoves">Black:</p></div>
+       </div>
+       <div class="timer" id="dwtimer"><span id="wtimer">00:00:00</span></div>
+    </div>
+    <!-- div centrale contenente la scacchiera -->
+    <div class="container" id="center"></div>
+    <!-- div destro contenente i pezzi mangiati, le impostazioni e i bottoni per la gestione della partita -->
+    <div class="container" id="right">
+       <!-- impostazioni e bottoni -->
+       <fieldset id="fieldset"><legend id="settingsLegend"><span>Settings&amp;Info</span></legend>
+          <div id="settings">
+             <label> <input type="radio" name="input" id="dad" onclick="eventH.inputClick(0)"> Drag&amp;Drop </label><br>
+             <label> <input type="radio" name="input" checked="checked" onclick="eventH.inputClick(1)"> Click </label><br>
+             <label> <input type="checkbox" id="hints" checked="checked" onclick="layout.showHints = !layout.showHints"> Show allowed moves </label><br>
+             <label> <input type="checkbox" id="animations" checked="checked" onclick="layout.animations = !layout.animations"> Show animations </label><br>
+             <label> <input type="checkbox" id="autosave" checked="checked" onclick="chess.autosave = !chess.autosave"> Autosave </label><br>
+             <button id="draw" onclick="eventH.draw()">Ask for Draw</button>
+          </div>
+          <div id="buttons">
+             <img class="control" onclick="eventH.newMatch()" src='./img/new.png' alt="New Match" title="New Match">
+             <img class="control" onclick="layout.showSavedMatches(true)" src='./img/save.png' alt="Save Match" title="Save Match">
+             <img class="control" onclick="layout.showSavedMatches(false)" src='./img/load.png' alt="Load Match" title="Load Match">
+             <img class="control" onclick="open('./info.html', '', '')" src='./img/info.png' alt="Info" title="Info">
+          </div>
+          <div id="info"><span id="check"> Check! </span><span id="turn"><span>White</span>'s turn</span></div>
+       </fieldset>
+    </div>
+    <!-- div che diviene visibile solo in determinate condizioni -->
+    <div id="transparent">
+       <!-- Conterrà CheckMate!, StaleMate! o Draw quando la partita sarà finita -->
+       <p id="gameover"> CheckMate! </p>
+       <!-- div per la scelta del pezzo dopo una promozione -->
+       <div id="choice">
+          <img class="choice white" src="" alt="queen" title="queen" onclick="eventH.choiceClick(1)">
+          <img class="choice black" src="" alt="rook" title="rook" onclick="eventH.choiceClick(2)">
+          <img class="choice black" src="" alt="knight" title="knight" onclick="eventH.choiceClick(3)">
+          <img class="choice white" src="" alt="bishop" title="bishop" onclick="eventH.choiceClick(4)">
+       </div>
+       <!-- div per il salvataggio e il caricamento delle partite -->
+       <div id="savedMatches"><p>Choose the match to be loaded:</p>
+          <div id="loadButtons">
+             <button class="load" id="new" onclick="eventH.loadClick(0)"> New </button>
+             <button class="load" id="save" onclick="eventH.loadClick(1)"> Save </button>
+             <button class="load" id="load" onclick="eventH.loadClick(2)"> Load </button>
+             <button class="load" onclick="eventH.loadClick(3)"> Cancel </button>
+             <button class="load" onclick="eventH.loadClick(4)"> Delete </button>
+             <button class="load" onclick="eventH.loadClick(5)"> Delete All </button>
+          </div>
+       </div>
+    </div>
+ </body>
+</html>

@@ -1,0 +1,227 @@
+#movesDiv{
+	position: absolute;
+	width: 90%;
+	height: 60%;
+	top: 20%;
+	left: 5%;
+}
+
+.moves{
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	border: 1px solid;
+	border-collapse: collapse;
+	margin: -1px;
+	overflow: auto;
+	background-color: white;
+}
+
+#wMovesDiv{
+	left: 0px;
+}
+
+#bMovesDiv{
+	right: 0px;
+}
+
+#bmoves, #wmoves{
+	white-space: pre;
+	width: 100%;
+	padding: 0px;
+	display: inline-block;
+	text-align: center;
+}
+
+.timer{
+	position: absolute;
+	width: 90%;
+	height: 15%;
+	left: 5%;
+	background-color: black;
+	color: white;
+}
+
+#dbtimer{
+	top: 3%;
+}
+
+#dwtimer{
+	bottom: 3%;
+}
+
+.container.eaten{
+	position: absolute;
+	border: 2px solid;
+}
+
+fieldset{
+	position: absolute;
+	top: 25%;
+	bottom: 25%;
+	background-color: white;
+	text-align: left;
+	left: 10%;
+	right: 10%;
+	margin: -2px;
+	border-width: 2px;
+	padding: 0px;
+}
+
+#settings{
+	position: absolute;
+	top: 0px;
+	padding: 0% 2%;
+	width: 96%;
+	overflow: auto;
+}
+
+#draw{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	max-width: 30%;
+	font-size: inherit;
+}
+
+#buttons{
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	left: 0px;
+	padding: 0px;
+}
+
+.control{
+	position: relative;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+
+#info{
+	position: absolute;
+	width: 90%;
+	margin: 0% 3%;
+	bottom: 0px;
+}
+
+#turn{
+	position: absolute;
+	right: 0%;
+	width: 60%;
+	text-align: right;
+}
+
+#check{
+	position: absolute;
+	left: 0%;
+	color: red;
+	width: 40%;
+	text-align: center;
+	visibility: hidden;
+}
+
+legend{
+	position: absolute;
+}
+
+legend > span{
+	background-color: white;
+}
+
+#draw{
+	right: 5%;
+}
+
+p{
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	cursor: default;
+}
+
+body{
+	position: absolute;
+	background-color: #DCDCDC;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.container{
+	position: relative;
+	height: 100%;
+	z-index: 1;
+}
+
+#left{
+	float: left;
+}
+
+#center{
+	float: left;
+}
+
+#right{
+	position: absolute;
+	right: 0px;
+}
+
+#transparent{
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/trans.png");
+	background-repeat: repeat;
+	visibility: hidden;
+	z-index: 4;
+}
+
+#transparent > p{
+	color: red;
+	visibility: hidden;
+}
+
+.choice{
+	position: relative;
+	height: 50%;
+	width: 49.9%;
+	float: left;
+}
+
+#choice{
+	position: absolute;
+	visibility: hidden;
+}
+
+.icon{
+	width: 100%;
+	height: 100%;
+}
+
+#savedMatches{
+	position: absolute;
+	top: 35%;
+	left: 30%;
+	right: 30%;
+	background-color: #EFEFEF;
+	visibility: hidden;
+	border: 2px outset;
+	padding: 2%;
+}
+
+#loadButtons{
+	width: 100%;
+	height: 15%;
+}
+
+.load{
+	margin-right: 2%;
+}
